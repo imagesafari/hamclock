@@ -15,14 +15,23 @@ This directory contains an archived snapshot of clearskyinstitute.com, specifica
 
 ## Contents
 
-### main/ - Main Website Archive
+### www/ - Browsable Website
+
+A self-contained browsable version of the archive.
+
+| File | Description |
+|------|-------------|
+| `index.html` | Main archive landing page |
+| `HamClock.html` | Complete HamClock documentation page |
+| `clearskyinstitute-home.html` | Original clearskyinstitute.com home page |
+
+### main/ - Raw Archives
 
 | File | Description |
 |------|-------------|
 | `HamClock-QST-article.pdf` | Original QST magazine article introducing HamClock |
 | `HamClock-source.zip` | Source code archive (v4.12, Nov 2024) |
 | `HamClock-source.tgz` | Source code archive (v4.12, Nov 2024) |
-| `web.archive.org/` | Internet Archive wrapper files |
 
 ### backend-examples/ - Backend Data Examples
 
@@ -73,9 +82,20 @@ See `/docs/BACKEND_ANALYSIS.md` for complete details.
 
 ## Using This Archive
 
+### Browse Locally
+
+You can serve the archive locally with Python:
+
+```bash
+cd docs/archive/www
+python3 -m http.server 8080
+```
+
+Then open http://localhost:8080 in your browser.
+
 ### View the Main Page
 
-Open `main/web.archive.org/web/20250123200844/https:/clearskyinstitute.com/ham/HamClock/index.html` in a web browser.
+Open `www/index.html` in a web browser for the archive landing page.
 
 ### Extract Source Code
 
